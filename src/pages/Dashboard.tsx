@@ -193,12 +193,7 @@ const Dashboard = () => {
 
         {/* Right Column - 1/3 width on large screens */}
         <div className="lg:col-span-1">
-          {wallet && (
-            <TransferCard
-              fromUser={wallet.accountNumber}
-              onSuccess={handleTransferSuccess}
-            />
-          )}
+          <TransferCard onSuccess={handleTransferSuccess} />
         </div>
       </div>
     </div>
