@@ -21,8 +21,17 @@ interface HistoryPageResponse {
   number: number;
 }
 
-export async function getHistory(id: number): Promise<HistoryPageResponse> {
-  const response = await axiosClient.get(`/finance/wallets/${id}/transactions`);
+export async function getHistory(
+  id: number,
+  page: number = 0,
+  size: number = 10
+): Promise<HistoryPageResponse> {
+  const response = await axiosClient.get(`/finance/wallets/${id}/transactions`, {
+    params: {
+      page,
+      size,
+    },
+  });
   return response.data;
 }
 
