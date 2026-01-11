@@ -76,3 +76,4 @@ const ProductCard = ({ product, onBuy }: ProductCardProps) => {
 
 export default ProductCard;
 
+

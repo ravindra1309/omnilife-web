@@ -6,3 +6,12 @@ export async function getProducts(): Promise<Product[]> {
   return response.data;
 }
 
+export async function placeOrder(userId: string, productId: number) {
+  const response = await axiosClient.post('/commerce/orders', {
+    userId,
+    productId,
+  });
+  return response.data;
+}
+
+
