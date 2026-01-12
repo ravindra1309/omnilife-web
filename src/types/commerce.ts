@@ -7,4 +7,13 @@ export interface Product {
   sku: string;
 }
 
+export interface OrderSummary {
+  id: number;
+  productName: string;
+  amount: number;
+  status: 'PENDING' | 'COMPLETED' | 'FAILED';
+  date: string;
+}
+
+
 

@@ -7,6 +7,7 @@ import History from './pages/History';
 import Settings from './pages/Settings';
 import Transfers from './pages/Transfers';
 import Marketplace from './pages/Marketplace';
+import Orders from './pages/Orders';
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="transfers" element={<Transfers />} />
             <Route path="market" element={<Marketplace />} />
+            <Route path="orders" element={<Orders />} />
           </Route>
         </Routes>
       </BrowserRouter>
